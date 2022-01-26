@@ -1,13 +1,16 @@
 import Login from './Components/LoginForm/Index'
-import './App.css'
-
+import {UserContextProvider} from './Context/UserContext'
+import { BrowserRouter } from 'react-router-dom'
+import Routes from './Routes'
 function App() {
 
 
   return (
-    <div className="App">
-      <Login></Login>
-    </div>
+    <BrowserRouter>
+      <UserContextProvider>
+        <Routes/>
+      </UserContextProvider>
+    </BrowserRouter>
   )
 }
 

@@ -1,6 +1,16 @@
 import './login.css';
-const Login = ()=>{
+import { useState, useContext } from 'react';
+import { UserContext } from '../../Context/UserContext';
+import { Link } from 'react-router-dom';
 
+
+
+
+const Login = ()=>{
+    const userContext = useContext(UserContext)
+    const [user, setUser] = useState({});
+
+    console.log(userContext)
 
     return (
         <div className="Login">
@@ -15,8 +25,12 @@ const Login = ()=>{
                         <label className="Text">Password</label>
                         <input type="password" className="Input-Text" id="password"/>
                     </span>
-                    <button className="Button">Log In</button>
+                    <button  className="Button" >Log In</button>
                 </form>
+                <div className='Register-div'>
+                    <Link to='#'>Forgot password?</Link>
+                    <Link to='Register' >Register</Link> 
+                </div>
             </div>
         </div>
     )

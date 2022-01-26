@@ -2,7 +2,17 @@
 *{
     box-sizing: border-box;
 }
+.Register-div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;   
+    font-family: Open-Sans;
+    margin-top: 12px ;
 
+}
 .Login{
     background-color: rgb(237, 243, 241);
     width: 100%;
